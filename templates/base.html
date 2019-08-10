@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +10,10 @@
 
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+  
+    <!--custom css-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+    
     <title>{% block page_title %}{% endblock %}</title>
 </head>
 
@@ -16,16 +21,21 @@
   
     <!--navbar-->  
     
-    
     <div class="container">
       <div class="row">
+        
+        
+        {% if user.is_authenticated %}
         <div class="col-sm">
-          <button type="button" class="btn btn-primary">See Artifacts</button>
+          {% block home_page %}<a  href="{% url 'products' %}" class="btn btn-primary">Home</a>{% endblock %}
         </div>
+        
+        
+        {% endif %}
+        
+        {% block sign_in_register_logout_modal %}
         <div class="col-sm">
-        </div>
-        <div class="col-sm">
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+          <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
           Sign In | Register | Logout
         </button>
     
@@ -57,24 +67,19 @@
     
     
                 <div class="modal-body">
-                  Register
-                  <form method="post">
-                    {% csrf_token %} {{ registration_form }}
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
-                  </form>
-                </div>
+                  New user? Sign up <a href="{% url 'registration' %}">here</a>
     
                 {% endif %}
     
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <a href="#">Register</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {% endblock %}
     </div>
 
 

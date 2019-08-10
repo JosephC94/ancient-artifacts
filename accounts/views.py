@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from accounts.forms import UserLoginForm, UserRegistrationForm
 
@@ -37,6 +38,24 @@ def login(request):
     
     
 def registration(request):
-    """Registers a new user and redirects them to the products page upon success"""
-    registration_form = UserRegistrationForm()
-    return render(request, 'index.html', {'registration_form': registration_form})
+    """Displays the registration page"""
+    if request.user.is_authenticated:
+        return redirect(reverse('index'))
+        
+    if request.method == "POST":
+        registration_form = UserRegistrationForm(request.POST)
+
+        if registration_form.is_valid():
+            registration_form.save()
+
+            user = auth.authenticate(username=request.POST['username'],
+                                     password=request.POST['password1'])
+            if user:
+                auth.login(user=user, request=request)
+                messages.success(request, "Welcome, you have successfully registered")
+                return redirect(reverse('products'))
+            else:
+                messages.error(request, "Unable to register your account at this time")
+    else:
+        registration_form = UserRegistrationForm()
+    return render(request, 'registration.html', {"registration_form": registration_form})

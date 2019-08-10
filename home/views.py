@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import auth, messages
+from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from accounts.forms import UserLoginForm, UserRegistrationForm
+from accounts.forms import UserLoginForm
 
 # Create your views here.
 
@@ -23,8 +24,4 @@ def index(request):
         login_form = UserLoginForm()
     return render(request, 'index.html', {'login_form': login_form})
 
-
-def registration(request):
-    """Registers a new user and redirects them to the products page upon success"""
-    registration_form = UserRegistrationForm()
-    return render(request, 'index.html', {'registration_form': registration_form})
+    
