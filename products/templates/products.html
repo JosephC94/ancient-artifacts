@@ -2,6 +2,26 @@
 
 {% block page_title %}Ancient Artifacts | Products{% endblock %}
 
-{% block home_page %}<a  href="{% url 'index' %}" class="btn btn-primary">Home</a> {% endblock %}
+{% block home_page %}<a  href="{% url 'index' %}" class="btn btn-primary">Home</a>{% endblock %}
 
 {% block page_heading %}Please find a list of Ancient Artifacts{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    {% for product in products %}
+    
+        <div class="product_image" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}}')"></div>
+    
+        <div class="bid_and_buy">{{ product.price }}</div>
+        <div class="product_title_and_description">{{ product.name }} {{ product.description }}</div>
+    
+        <form method="post" action="{% url 'add_to_cart' product_id %}">
+            {% csrf_token %}
+            <button class="btn btn-success" type="submit">BUY NOW and add to cart</button>
+        </form>
+    {% endfor %}
+</div>
+
+{% endblock %}
