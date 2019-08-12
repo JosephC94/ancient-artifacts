@@ -17,6 +17,8 @@
     <!--custom css-->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
     
+    {% block head_js %}{% endblock %}
+    
     <title>{% block page_title %}{% endblock %}</title>
 </head>
 
@@ -30,7 +32,7 @@
         
         {% if user.is_authenticated %}
         <div class="col-sm">
-          {% block home_page %}<a  href="{% url 'products' %}" class="btn btn-primary">Home</a>{% endblock %}
+          {% block home_page %}<a  href="{% url 'products' %}" class="btn btn-primary">Artifacts For Sale</a>{% endblock %}
         </div>
         
         
