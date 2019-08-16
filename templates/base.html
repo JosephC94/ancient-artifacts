@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     <!--font awesome-->
-    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+  
+    
   
     <!--custom css-->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
@@ -24,25 +26,30 @@
 
 <body>
   
-    <!--navbar-->  
+  
+  <nav class="navbar navbar-light bg-light">
     
-    <div class="container">
-      <div class="row">
-        
-        
+  
+<div class="container">
+    
         {% if user.is_authenticated %}
-        <div class="col-sm">
-          {% block home_page %}<a  href="{% url 'products' %}" class="btn btn-primary">Artifacts For Sale</a>{% endblock %}
+        <div class="">
+          {% block home_page %}<a  href="{% url 'products' %}" <i class="fab fa-sistrix"> Artifacts</i></a>{% endblock %}
         </div>
-        
-        
         {% endif %}
         
+        
+        
+        {% block products_page %}{% endblock %}
+    
+    
+        
+    <div class="fas fa-clipboard">
         {% block sign_in_register_logout_modal %}
-        <div class="col-sm">
-          <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+       
+          <a type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
           Sign In | Register | Logout
-        </button>
+        </a>
     
           <!-- Modal -->
           <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
@@ -83,15 +90,28 @@
             </div>
           </div>
         </div>
+      
+      
+      {% block cart_page %} {% endblock %}
+      
       </div>
       {% endblock %}
+  </div>
+
+
+</nav>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="page_title vesper-libre ">{% block page_heading %}{% endblock %}</h1>
     </div>
+  </div>
+</div>
 
-{% block cart_page %} {% endblock %}
-{% block products_page %} {% endblock %}
 
 
-<h1>{% block page_heading %}{% endblock %}</h1>
 
 <hr>
 
@@ -105,6 +125,8 @@
 
 {% block content %} {% endblock %}
 
+
+{% block home_page_intro %} {% endblock %}
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

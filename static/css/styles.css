@@ -1,5 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Fjord+One|Special+Elite|Vesper+Libre&display=swap');
+
+/*-------------fonts------------*/
+
+.bg-image {
+    background: url('/static/images/machu-pichu-bg.jpg') no-repeat center center fixed;
+    background-size: 100% auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.special-elite {font-family: 'Special Elite', cursive;}
+.vesper-libre {font-family: 'Vesper Libre', serif;}
+.fjord-one {font-family: 'Fjord One', serif;}
+
 form {
     width: 50%;
+}
+
+.page_title {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 60px;
+    text-shadow: 1px -1.5px #c3bebe;
+
 }
 
 .product_image {
@@ -9,4 +34,17 @@ form {
     width: 150px;
     height: 150px;
     margin: 0 auto;
+}
+
+
+
+
+/*----------------Home page-------------*/
+
+.intro_paragraph {
+    padding-top: 35px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 2;
+    font-size: 22px;
 }
