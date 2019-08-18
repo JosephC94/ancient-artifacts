@@ -21,11 +21,18 @@ def checkout(request):
         order_form = OrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)
 
+        # import pdb; pdb.set_trace()
 
+        print(payment_form.data)
+        print(payment_form.errors)
+        
+        
         if order_form.is_valid() and payment_form.is_valid():
             order = order_form.save(commit=False)
             order.date = timezone.now()
             order.save()
+
+            
 
             cart = request.session.get('cart', {})
             total = 0
@@ -35,8 +42,7 @@ def checkout(request):
                 order_line_item = OrderLineItem(order=order, product=product, quantity=quantity)
                 order_line_item.save()
             
-            
-            
+           
             try:
                 customer = stripe.Charge.create(
                     amount=int(total * 100),
@@ -44,7 +50,11 @@ def checkout(request):
                     description=request.user.email,
                     card=payment_form.cleaned_data['stripe_id']
                 )
-            except stripe.error.CardError:
+                
+            except stripe.error.CardError as e:
+                
+                print(str(e))
+                
                 messages.error(request, "Card declined. Please try again")
             
             

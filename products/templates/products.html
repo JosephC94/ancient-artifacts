@@ -24,16 +24,14 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm">
+        <div class="col-sm search_bar">
             <form action="{% url 'search' %}" method="GET">
-                <input type="text" name="a">
-                <button type="submit">Search Artifact</button>
+                <input class="search_box shadow_remove" type="text" name="a">
+                <button class="search_button shadow_remove" type="submit">Search Artifact</button>
             </form>
         </div>
     </div>
 </div>
-
-<hr>
 
 
 <div class="container">
@@ -46,15 +44,15 @@
 
     <div class=".col-md-6 .offset-md-3">
 
-    <div class="bid_and_buy">{{ product.price }}</div>
+    <div class="text product_price">{{ product.price }}</div>
 
     <form method="post" action="{% url 'add_to_cart' product.id %}">
         {% csrf_token %}
 
-        <div class="input-group">
-            <input name="quantity" type="number" min="1" max="1" class="form-control" placeholder="Quantity">
+        <div class="input-group padding_top">
+            <input class="shadow_remove width_100" name="quantity" type="number" min="1" max="1" class="form-control" placeholder="Quantity">
                 <span>
-                    <button class="btn btn-success" type="submit">Buy Now and Add to cart</button>
+                    <button class="shadow_remove bid_buy_buttons" type="submit">Buy Now and Add to cart</button>
                 </span>
         </div>
     </form>
@@ -62,28 +60,29 @@
     <form method="post" action="">
         {% csrf_token %}
 
-        <div class="input-group">
-            <input name="bid" placeholder="Enter an amount to bid">
+        <div class="input-group padding_top">
+            <input class="shadow_remove" name="bid" placeholder='{{ product.bid }}'>
             <span>
-                <button class="btn btn-success" type="submit">Place Bid</button>
+                <button class="shadow_remove bid_buy_buttons" type="submit">Bid</button>
                     </span>
         </div>
     </form>
     
     </div>
 
-    <div class="product_title_and_description col-sm">{{ product.name }} {{ product.description }}</div>
+
+    <div class="text col-sm">{{ product.name }}
+    <hr>
+    <div class="text product_title_and_description col-sm">{{ product.description }}</div>
+    </div>
 
     </div>
 
-    <hr>
+    
 
     {% endfor %}
 
 </div>
-
-
-
 
 
 {% endblock %}
