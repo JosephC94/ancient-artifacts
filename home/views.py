@@ -28,3 +28,7 @@ def index(request):
 def knights_sword(request):
     """Directs user to info page about the knights Templar"""
     return render(request, 'knights_sword.html')
+    
+def holy_grail(request):
+    """Directs user to info page about the Holy Grail"""
+    return render(request, 'holy_grail.html')

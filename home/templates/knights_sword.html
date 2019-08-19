@@ -14,18 +14,26 @@
     <!--custom css-->
     <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
     
-    <title>Knight's Templar</title>
-    
-</head>
+
+    <title>{% block item_page_title %}Knight's Templar{% endblock %}</title>
+  
+  
+<nav>
+    <a class="navbar-text-home" href="{% url 'index' %}">Home</a>
+    <a class="navbar-text-artifacts" href="{% url 'products' %}">Artifacts</a>
+</nav>
+
+
 <body>
     
-    <h1 class="item-page-header">Knights Templar | Order of chivalry</h1>
+    
+    <h1 class="item-page-header">{% block header %}Knights Templar | Order of Chivalry{% endblock %}</h1>
     
 
 <div class="container chapel-container">
     <div class="row">
         <div class="chapel col">
-            <img src="/static/images/chapel1.png">
+            <img class="max-width-100" src="/static/images/chapel1.png">
             <p>Chapel of the Beaune commandery, where Jacques de Molay was ordained as his sword discovered</p>
         </div>
     </div>
@@ -35,7 +43,7 @@
 <div class="conatiner jacques-image-container">
     <div class="row">
         <div class="jacques-de-molay">
-            <img src="/static/images/180px-JacquesdeMolay.jpg">
+            <img class="max-width-100" src="/static/images/180px-JacquesdeMolay.jpg">
             <p>Jacques de Molay</p>
         </div>
     </div>
@@ -44,15 +52,44 @@
    
 <div class="container">
     <p class="item-page-text">
+        {% block p1 %}
         The Knights Templar order flourished during the Middle Ages. The name of the first leader of the Knights Templar order was Hugh de Payens. The leaders of the Knights Templar were given the title of Grand Master. There were 23 Grand Masters from 1118 to
-        1314. The last leader of the Knights Templar order was Jacques de Molay (1292-1314) who was burnt at the stake in 1314. The sword was crafted specifically in his name and is one of the twenty-three Grand Masters' swords, of which only 4 are still
-        in existence today. Jacques name the sword 'Order' as his goal was to reform the Order of The Knights Templar and adjust it to the situation in the Holy Land during the waning days of the Crusades. However, it has been re-named 'The Curse', since
-        while burning on the pyre, Jacques swore on his sword, cursing King Philip IV of France, his descendants, Pope Clement V, and everyone else who supported his death. De Molay said that within a year and a day, Clement V and Philip IV would die.
-        He also said Philip's bloodline would reign in France no more. It happened as De Molay wished for, and death came for Clement first. He lost a battle with a damaging disease on April 20, 1314. Shortly after the Pope, Philip died of a stroke while
-        hunting. A tragic death was also the destiny for all of Philip’s successors. Between 1314 and 1328 all three sons and grandsons of the French king died. Within fourteen years from the death of De Molay the House of Caped no longer existed after
-        it had stood for 300 years. The sword was discovered 700 years later (2014) during some tiling repairs in the Chapel of the Beaune commandery, where Jacques de Molay was ordained, beneath the tiles on the floor on the chapel. This sword is currently
-        up for auction, and is the only Grand Masters sword available for purchase.
+        1314. The last leader of the Knights Templar order was Jacques de Molay (pictured), (1292-1314) who was burnt at the stake in 1314.
+        {% endblock %}
     </p>
+    <p class="item-page-text">
+        {% block p2 %}
+        The sword was crafted specifically in his name and is one of the twenty-three Grand Masters' swords, of which only 4 are still
+        in existence today. Jacques named the sword 'Order' as his goal was to reform the Order of The Knights Templar and adjust it to the situation in the Holy Land during the waning days of the Crusades.
+        {% endblock %}
+    </p>
+</div>    
+
+<div class="container column">
+    <div class="row">
+        <p class="item-page-text col-sm">
+            {% block p3 %}
+            The sword has been renamed 'The Curse', since while burning on the pyre, Jacques swore on his sword, cursing King Philip IV of France, his descendants, Pope Clement V, and everyone else who supported his death. De Molay said that within a year and a day,
+            Clement V and Philip IV would die. He also said Philip's bloodline would reign in France no more. It happened as De Molay wished for, and death came for Clement first. He lost a battle with a damaging disease on April 20, 1314. Shortly after
+            the Pope, Philip died of a stroke while hunting.
+            {% endblock %}
+        </p>
+        <p class="item-page-text col-sm">
+            {% block p4 %}
+            A tragic death was also the destiny for all of Philip’s successors. Between 1314 and 1328 all three sons and grandsons of the French king died. Within fourteen years from the death of De Molay the House of Caped no longer existed after it had stood for
+            300 years. The sword was discovered 700 years later (2014) during some tiling repairs in the Chapel of the Beaune commandery, where Jacques de Molay was ordained, beneath the tiles on the floor on the chapel.
+            {% endblock %}
+            <div class="container hr-container">
+                <hr class="hr-item-page">
+                <p class="bold">
+                    {% block p5 %}
+                    The sword is currently up for auction, and is the only sword owned by a Grand Master templar available for purchase in the world.
+                    {% endblock %}
+                </p>
+                <hr class="hr-item-page">
+            </div>
+        </p>
+    </div>
 </div>
     
 </body>

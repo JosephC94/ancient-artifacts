@@ -81,8 +81,46 @@ form {
 /*-----------------Item Pages------------*/
 
 
+.navbar-text-home {
+    color: white;
+    padding-left: 50px;
+    font-size: 28px;
+    float: left;
+    text-decoration: underline;
+    font-family: 'Raleway', serif;
+}
+
+.navbar-text-artifacts{
+    color: white;
+    padding-right: 50px;
+    font-size: 28px;
+    float: right;
+    text-decoration: underline;
+    font-family: 'Raleway', serif;
+}
+
+.navbar-text-artifacts:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-text-home:hover{
+    color: white;
+    text-decoration: none;
+}
+
+
 .item-page-header {
-    
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    color: white;
+    font-family: fantasy;
+    text-decoration: underline;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    line-height: 4;
+    font-size: 50px;
 }
 
 .chapel-container {
@@ -115,8 +153,32 @@ form {
     font-size: 18px;
     letter-spacing: 1.5px;
     line-height: 1.7;
+    padding-bottom: 60px;
 }
 
+.column{
+    width: 80%;
+}
+
+.bold{
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
+.hr-item-page{
+    color: #b1aeae;
+    border: 2px solid;
+}
+
+.hr-container{
+    padding-bottom: 50px;
+}
+
+.max-width-100{
+    max-width: 100%;
+}
 
 /*----------------Products page-------------*/
 
