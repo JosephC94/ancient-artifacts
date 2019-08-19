@@ -25,3 +25,6 @@ def index(request):
     return render(request, 'index.html', {'login_form': login_form})
 
     
+def knights_sword(request):
+    """Directs user to info page about the knights Templar"""
+    return render(request, 'knights_sword.html')

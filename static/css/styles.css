@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Libre+Caslon+Display|Livvic|Montserrat|Open+Sans+Condensed:300|Fjord+One|Special+Elite|Vesper+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Cormorant+Garamond|Libre+Caslon+Display|Livvic|Montserrat|Open+Sans+Condensed:300|Fjord+One|Special+Elite|Vesper+Libre&display=swap');
 
 /*-------------fonts------------*/
 
@@ -73,10 +73,59 @@ form {
     text-align: center;
 }
 
+.carousel-caption{
+    color: black;
+}
+
+
+/*-----------------Item Pages------------*/
+
+
+.item-page-header {
+    
+}
+
+.chapel-container {
+    width: 30%;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 0px;
+}
+
+.jacques-image-container{
+    width: 20%;
+    float: right;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    color: #cac7be;
+}
+
+.chapel {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    color: #cac7be;
+}
+
+
+.item-page-text{
+    font-family: 'Raleway', serif;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    line-height: 1.7;
+}
 
 
 /*----------------Products page-------------*/
 
+
+.carousel-images{
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
 
 .product_title_and_description {
     font-size: 14px;
