@@ -32,3 +32,23 @@ def knights_sword(request):
 def holy_grail(request):
     """Directs user to info page about the Holy Grail"""
     return render(request, 'holy_grail.html')
+    
+def tutankhamun(request):
+    """Directs user to info page about the Mask of Tutankhmun"""
+    return render(request, 'tutankhamun.html')
+
+def sandals(request):
+    """Directs user to info page about the Sandals of Jesus"""
+    return render(request, 'jesus_sandals.html')
+    
+def excalibur(request):
+    """Directs user to info page about the Excalibur"""
+    return render(request, 'excalibur.html')
+    
+def belt(request):
+    """Directs user to info page about the Excalibur"""
+    return render(request, 'belt.html')
+    
+def hammer(request):
+    """Directs user to info page about the Excalibur"""
+    return render(request, 'hammer.html')

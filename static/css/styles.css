@@ -160,6 +160,10 @@ form {
     width: 80%;
 }
 
+.margin-right {
+    margin-right: 35px;
+}
+
 .bold{
     font-weight: 700;
     font-size: 24px;
