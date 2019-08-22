@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from home.views import index, knights_sword, holy_grail, tutankhamun, sandals, excalibur, belt, hammer
+from home.views import index, knights_sword, holy_grail, tutankhamun, sandals, excalibur, belt, hammer, lamp
 from accounts import urls as accounts_urls
 from products import urls as urls_products
 from products.views import all_products
@@ -35,6 +35,7 @@ urlpatterns = [
     url(r'^excalibur/', excalibur, name="excalibur"),
     url(r'^aphrodites_belt/', belt, name="belt"),
     url(r'^thors_hammer/', hammer, name="hammer"),
+    url(r'^genies_lamp/', lamp, name="lamp"),
     url(r'^accounts/login/$', index, name='index'),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^products/', include(urls_products)),

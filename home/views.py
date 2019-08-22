@@ -46,9 +46,13 @@ def excalibur(request):
     return render(request, 'excalibur.html')
     
 def belt(request):
-    """Directs user to info page about the Excalibur"""
+    """Directs user to info page about the Belt of Aphrodite"""
     return render(request, 'belt.html')
     
 def hammer(request):
-    """Directs user to info page about the Excalibur"""
+    """Directs user to info page about Mjöllnir"""
     return render(request, 'hammer.html')
+    
+def lamp(request):
+    """Directs user to info page about the Geni's Lamp"""
+    return render(request, 'lamp.html')
