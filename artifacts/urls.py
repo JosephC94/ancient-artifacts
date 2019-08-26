@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from home.views import index, knights_sword, holy_grail, tutankhamun, sandals, excalibur, belt, hammer, lamp
+from bid.views import bid_detail, create_bid
 from accounts import urls as accounts_urls
 from products import urls as urls_products
 from products.views import all_products
@@ -37,6 +38,8 @@ urlpatterns = [
     url(r'^thors_hammer/', hammer, name="hammer"),
     url(r'^genies_lamp/', lamp, name="lamp"),
     url(r'^accounts/login/$', index, name='index'),
+    url(r'^(?P<pk>\d+)/', bid_detail, name='bid_detail'),
+    url(r'^create_bid/', create_bid, name='create_bid'),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^products/', include(urls_products)),
     url(r'^cart/', include(urls_cart)),

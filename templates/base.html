@@ -28,34 +28,36 @@
 
   
 {% block navbar %} 
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light background_transparent">
 <div class="container">
     
         {% if user.is_authenticated %}
-        <div class="">
-          {% block home_page %}<a  href="{% url 'products' %}" <i class="fab fa-sistrix"> Artifacts</i></a>{% endblock %}
+        {% block home_page %}
+        <div <i class="fas fa-search page_links">
+            <a class="page_links" href="{% url 'products' %}">Artifacts</a>
         </div>
+        {% endblock %}
         {% endif %}
         
         
         
         {% block products_page %}{% endblock %}
     
-    
+        {% block cart_page %} {% endblock %}
         
-    <div class="fas fa-clipboard">
+    <div class="fas fa-clipboard page_links">
         {% block sign_in_register_logout_modal %}
        
-          <a type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+          <a type="submit" class="btn" data-toggle="modal" data-target="#exampleModalScrollable" style="color:black;">
           Sign In | Register | Logout
         </a>
     
           <!-- Modal -->
-          <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+          <div class="modal fade model_text2" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalScrollableTitle">Sign in | Register | Logout</h5>
+                  <h5 class="modal-title model_text2" id="exampleModalScrollableTitle">Sign in | Register | Logout</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -63,7 +65,7 @@
     
                 {% if user.is_authenticated %}
                 <div class="modal-body">
-                  <li><a href="{% url 'logout' %}">Logout</a></li>
+                  <li><a href="{% url 'logout' %}" class="model_text">Logout</a></li>
                 </div>
     
                 {% else %}
@@ -90,37 +92,32 @@
           </div>
         </div>
       
-      
-      {% block cart_page %} {% endblock %}
-      
       </div>
       {% endblock %}
   </div>
 {% endblock navbar %}
-
 </nav>
 
+<hr class="navbar_hr">
 
 <div class="container">
   <div class="row">
     <div class="col-12">
       <h1 class="page_title vesper-libre ">{% block page_heading %}{% endblock %}</h1>
+      
+ {% if messages %}
+<div>
+
+  {% for message in messages %}
+  <h5 class="message">{{ message }}</h5> {% endfor %}
+
+</div>
+{% endif %}
+
     </div>
   </div>
 </div>
 
-
-
-
-<hr>
-
-{% if messages %}
-  <div>
-    {% for message in messages %}
-      {{ message }}
-    {% endfor %}
-  </div>
-{% endif %}
 
 {% block content %}<div class="bg-image"></div>{% endblock %}
 

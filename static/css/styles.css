@@ -10,6 +10,14 @@ body {
     height: 100%;
 }
 
+input[type="text"] {
+    letter-spacing: 2px;
+    line-height: 2;
+    font-size: 20px;
+    color: #e3dfd0;
+    font-family: 'Montserrat', serif;
+}
+
 .special-elite {font-family: 'Special Elite', cursive;}
 .vesper-libre {font-family: 'Vesper Libre', serif;}
 .fjord-one {font-family: 'Fjord One', serif;}
@@ -66,7 +74,36 @@ form {
 
 
 
-/*----------------Home page-------------*/
+/*----------------Home and Base pages-------------*/
+
+.model_text{
+    color: #585755;
+    font-size: 22px;
+}
+
+.model_text2{
+    color: #585755;
+    font-size: 22px;
+}    
+
+.model_text:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+.message {
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.navbar_hr{
+    background-color: white;
+    padding-bottom: 2px;
+    margin: 15px;
+}
 
 .intro_paragraph {
     padding-top: 35px;
@@ -77,9 +114,39 @@ form {
     color: black;
 }
 
+.background_transparent{
+    background-color: transparent;
+}
+
+.page_links{
+    padding-top: 25px;
+    color: #d6cfcf;
+    font-size: 22px;
+}
+
+.page_links:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.colour_black{
+    color: black;
+}
 
 /*-----------------Item Pages------------*/
 
+.product_name_hr{
+    background-color: #e3dfd0;
+    padding-top: 1.5px;
+}
+
+.padding_top10{
+    padding-top: 10px;
+}
+
+.padding_top40{
+    padding-top: 40px;
+}
 
 .navbar-text-home {
     color: white;
@@ -228,6 +295,11 @@ form {
     border: none;
     text-decoration: underline;
     font-size: 20px;
+}
+
+.badge-info{
+    background-color: antiquewhite;
+    color: black;
 }
 
 .width_100 {

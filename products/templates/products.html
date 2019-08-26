@@ -2,14 +2,14 @@
 
 {% block page_title %}Ancient Artifacts | Products{% endblock %}
 
-{% block home_page %}<a  href="{% url 'index' %}" <i class="fas fa-home"></i> Home</a>{% endblock %}
+{% block home_page %}<a  href="{% url 'index' %}" <i class="fas fa-home page_links"></i> Home</a>{% endblock %}
 
 
 
 {% block cart_page %}
-    <a  href="{% url 'view_cart' %}" class="fas fa-cart-arrow-down">
+    <a  href="{% url 'view_cart' %}" class="fas fa-cart-arrow-down page_links">
         {% if product_count > 0 %}
-            <label class="badge badge-warning">{{ product_count }}</label>
+            <label class="badge badge-info">{{ product_count }}</label>
         {% endif %}
     View Cart</a>
 {% endblock %}
@@ -52,27 +52,21 @@
         <div class="input-group padding_top">
             <input class="shadow_remove width_100" name="quantity" type="number" min="1" max="1" class="form-control" placeholder="Quantity">
                 <span>
-                    <button class="shadow_remove bid_buy_buttons" type="submit">Buy Now and Add to cart</button>
+                    <button class="shadow_remove bid_buy_buttons padding_top10" type="submit">Buy Now and Add to cart</button>
                 </span>
         </div>
     </form>
-
-    <form method="post" action="">
-        {% csrf_token %}
-
-        <div class="input-group padding_top">
-            <input class="shadow_remove" name="bid" placeholder='{{ product.bid }}'>
-            <span>
-                <button class="shadow_remove bid_buy_buttons" type="submit">Bid</button>
-                    </span>
-        </div>
-    </form>
+    
+    <div class="padding_top40">
+        <a href="{% url 'create_bid' %}" class="padding_top40">Create Bid</a>
+    </div>
+    
     
     </div>
 
 
     <div class="text col-sm">{{ product.name }}
-    <hr>
+    <hr class="product_name_hr">
     <div class="text product_title_and_description col-sm">{{ product.description }}</div>
     </div>
 
