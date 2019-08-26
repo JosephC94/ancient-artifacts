@@ -72,13 +72,53 @@ form {
 }
 
 
+/*----------------Register page-------------*/
+
+.register_form{
+    margin-left: 50px;
+    letter-spacing: 1px;
+    line-height: 2;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #e3dfd0;
+    font-family: 'Montserrat', serif;
+    padding-bottom: 100px;
+}
+
+.register_page_home_btn{
+    float: right;
+    text-transform: capitalize;
+    letter-spacing: 0;
+}
+
+#home_button{
+    padding-left: 100px;
+    padding-top: 40px;
+    padding-bottom: 17px;
+}
 
 
 /*----------------Home and Base pages-------------*/
 
+.mark-color-white{
+    background-color: white;
+}
+
+.index_page_image_carousel{
+    font-family: 'Montserrat', serif;
+}
+
 .model_text{
     color: #585755;
     font-size: 22px;
+}
+
+.login-button{
+    margin-top: 15px;
+}
+
+.sign_up_button{
+    color: #78bbdc;
 }
 
 .model_text2{

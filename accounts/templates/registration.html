@@ -2,20 +2,20 @@
 
 {% load bootstrap_tags %}
 
+{% block navbar %}<a  href="{% url 'index' %}" <i class="fas fa-home page_links" id="home_button"></i> Home</a>{% endblock %}
+
 {% block page_title %}Ancient Artifacts | Register{% endblock %}
 
 {% block page_heading %}Register{% endblock %}
 
 {% block content %}
 
-<form method="POST">
+
+<form method="POST" class="register_form">
     {% csrf_token %} 
     {{ registration_form | as_bootstrap }}
-    <button type="submit" class="btn btn-default">Register</button>
+    <button type="submit" class="btn btn-light">Register</button>
 </form>
-
-
-<a class="btn btn-default" href="{% url 'index' %}">Home</a>
 
 
 {% endblock %}

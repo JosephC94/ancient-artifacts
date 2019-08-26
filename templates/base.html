@@ -74,13 +74,13 @@
                   Sign in
                   <form method="post">
                     {% csrf_token %} {{ login_form }}
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-secondary login-button">Login</button>
                   </form>
                 </div>
     
     
                 <div class="modal-body">
-                  New user? Sign up <a href="{% url 'registration' %}">here</a>
+                  New user? Sign up <a class="sign_up_button" href="{% url 'registration' %}">here</a>
     
                 {% endif %}
     
