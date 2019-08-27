@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'accounts',
     'home',
     'products',
-    'bid',
     'django_forms_bootstrap',
     'cart',
     'checkout',

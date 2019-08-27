@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load bootstrap_tags %}
+
 {% block page_title %}Ancient Artifacts | Products{% endblock %}
 
 {% block home_page %}<a  href="{% url 'index' %}" <i class="fas fa-home page_links"></i> Home</a>{% endblock %}
@@ -57,9 +59,10 @@
         </div>
     </form>
     
-    <div class="padding_top40">
-        <a href="{% url 'create_bid' %}" class="padding_top40">Create Bid</a>
-    </div>
+    <form method="POST" enctype="multipart/form-data" class='post-form' id='form'>
+        {% csrf_token %} {{ form | as_bootstrap }}
+        <button type="submit" id='post-btn' class='btn btn-lg btn-default login-btn'>Place Bid</button>
+    </form>
     
     
     </div>

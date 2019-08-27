@@ -1,0 +1,20 @@
+{% load bootstrap_tags %}
+
+<form method="POST" enctype="multipart/form-data" class='post-form' id='form'>
+                {% csrf_token %}
+                {{ form | as_bootstrap }}
+                <button type="submit" id= 'post-btn' class='btn btn-lg btn-default login-btn'>Place Bid</button>
+            </form>
+            
+<div class="text col-sm">{{ product.name }}
+    <hr class="product_name_hr">
+    <div class="text product_title_and_description col-sm">{{ product.description }}</div>
+</div>
+
+<div>
+    {% for bid in product.bids %}
+
+    <h3>{{ bid }}</h3>
+
+    {% endfor %}
+</div>
