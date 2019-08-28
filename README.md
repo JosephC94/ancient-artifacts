@@ -2,18 +2,18 @@
 
 [Link to website via GitHUb](https://github.com/JosephC94/ancient-artifacts/)
 
-A website used for browsing, bidding, buying and learning about different ancient artifacts. The website contains a welcome page, registration and login functionality, a page of products listed, detailed info about each product and events they have been involved in, and the option to purchase the product. The website's primary focus is for the user to buy a product.
+A website used for browsing, bidding, buying and learning about different ancient artifacts. The website contains a welcome page, registration and login functionality, a page of products listed, detailed info about each product and events they have been involved in, and the option to purchase the product. The website's primary focus is for the user to buy a product. The user must register and account or sign in, in order to navigate to the products.
 
 The website focuses largely on what is for sale, each items journey of events, previous ownership and importance. The goals of the website are to:
 
-*Provide knowledge of each product's journey and significance to entice customer's to purchase
-*Allow a user to purchase products
-*Excellent use of UX to ensure customers go from visiting the website to leaving the website having purchased a product or products
-*Provide enough info of each item to highlight its importance for customers to recognise its true value for purchase
-*Allow users to search for a product
-*Allow users the option to bid on a product
-*Easy navigation
-*Simple order process that conforms with modern day online order processes
+* Provide knowledge of each product's journey and significance to entice customer's to purchase
+* Allow a user to purchase products
+* Excellent use of UX to ensure customers go from visiting the website to leaving the website having purchased a product or products
+* Provide enough info of each item to highlight its importance for customers to recognise its true value for purchase
+* Allow users to search for a product
+* Allow users the option to bid on a product
+* Easy navigation
+* Simple order process that conforms with modern day online order processes
  
 ## UX
  
@@ -62,13 +62,24 @@ The website focuses largely on what is for sale, each items journey of events, p
 
 ### Mock Ups
 
-## All mockups found [here](https://github.com/JosephC94/ancient-artifacts/)
- https://github.com/JosephC94/ancient-artifacts/tree/master/mockups
-
+## All mockups found [here](https://github.com/JosephC94/ancient-artifacts/tree/master/mockups)
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+Each page of the website contains a navbar with content that alters depending on which page the user is on. The home page contains links for the products page (Artifacts) and the Resgiter/Sign In/Out Model. On the products page, the navbar contents change to Home, View Cart, Resgiter/Sign In/Out modal. View cart changes to Back To Products on the View Cart page and the Checkout page's navbar is the same as the Home page navbar. All contents of the navbar remain in the same position with each page.
+
+The font family, colour and page layout of each page is the same. This is so that the website is easily recognisable and much more user friendly to navigate. Each page also contains a Title so the user can easily recognise where they are.
+
+* Home Page:
+
+This page contains a a brief intro to the website in the middle of the page with a title. Beneath the descriptive text, the user is presented with a slideshow of each product, and the name of each product, through a carousel.
+
+* Products page (Artifacts page)
+
+This page is accessed when a user sign in or registers. It displays a list of all of the products on site with an image, price, 'Buy now and add to cart' option, a link for the user to place a bid on the product, and a brief description.
+
+* 
+
  
 ### Existing Features
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
