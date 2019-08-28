@@ -51,12 +51,12 @@ The website focuses largely on what is for sale, each items journey of events, p
 
 ### User stories:
 
-1 As a historian, I would like a site that provides the ability to purchase ancient artifacts
-2 As a history student, I would like to know more information about some historical artifacts to gain some knowledge and insight about them
-3 As a competitive buyer, I would like a site that draws a lot of attention to potential bidders
-4 As a person interested in unique historical artifacts, I would like a site that gives me the opportunity to purchase and find out more information about some of them
-5 As someone interested in historical events and artifacts, I would like a website that tells of the journey that an item went through for my own fascination
-6 As a user of the bidding site, I would like the opportunity to narrow my search to something that directly interests me so I am not searching through each and every product
+1. As a historian, I would like a site that provides the ability to purchase ancient artifacts
+2. As a history student, I would like to know more information about some historical artifacts to gain some knowledge and insight about them
+3. As a competitive buyer, I would like a site that draws a lot of attention to potential bidders
+4. As a person interested in unique historical artifacts, I would like a site that gives me the opportunity to purchase and find out more information about some of them
+5. As someone interested in historical events and artifacts, I would like a website that tells of the journey that an item went through for my own fascination
+6. As a user of the bidding site, I would like the opportunity to narrow my search to something that directly interests me so I am not searching through each and every product
 
 
 ### Mock Ups
