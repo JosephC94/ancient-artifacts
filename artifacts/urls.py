@@ -38,7 +38,7 @@ urlpatterns = [
     url(r'^genies_lamp/', lamp, name="lamp"),
     url(r'^accounts/login/$', index, name='index'),
     url(r'^(?P<pk>\d+)bid_detail/', bid_detail, name='bid_detail'),
-    url(r'^(?P<pk>\d+)/bid/', product_detail, name="product_detail"),
+    url(r'^(?P<pk>\d+)/product_detail/', product_detail, name="product_detail"),
     url(r'^(?P<pk>\d+)/place_bid/', place_bid, name="place_bid"),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^products/', include(urls_products)),
