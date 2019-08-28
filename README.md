@@ -53,11 +53,10 @@ The website focuses largely on what is for sale, each items journey of events, p
 
 1 As a historian, I would like a site that provides the ability to purchase ancient artifacts
 2 As a history student, I would like to know more information about some historical artifacts to gain some knowledge and insight about them
-3 As a collector of rare and valuable items, I would like a site that allows me the opportunity to purchase more rare items to add to my collection
-4 As a competitive buyer, I would like a site that draws a lot of attention to potential bidders
-5 As a person interested in unique historical artifacts, I would like a site that gives me the opportunity to purchase and find out more information about some of them
-6 As someone interested in historical events and artifacts, I would like a website that tells of the journey that an item went through for my own fascination
-7 As a user of the bidding site, I would like the opportunity to narrow my search to something that directly interests me so I am not searching through each and every product
+3 As a competitive buyer, I would like a site that draws a lot of attention to potential bidders
+4 As a person interested in unique historical artifacts, I would like a site that gives me the opportunity to purchase and find out more information about some of them
+5 As someone interested in historical events and artifacts, I would like a website that tells of the journey that an item went through for my own fascination
+6 As a user of the bidding site, I would like the opportunity to narrow my search to something that directly interests me so I am not searching through each and every product
 
 
 ### Mock Ups
@@ -110,7 +109,27 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 ### User story 2:
 
-* 'As a history student, I would like to know more information about some historical artifacts to gain some knowledge and insight about them'. This user story is achieved when the user - once registered - enters the Products page. This is done automatically when the user registers or signs in, or clicks on the Artifacts or Back to Products links as well as typing in /products/ into the url bar. This page is only accessible if the user has registered, otherwise they are redirected to the home page should they try accessing the Products page outside of being logged in. The user can then 
+* 'As a history student, I would like to know more information about some historical artifacts to gain some knowledge and insight about them'. This user story is achieved when the user is presented with the home page. The user can click on the product name/hyperlink at the bottom of each slide on the carousel of each product. The user will be directed to that particular product's url page which can be accessed either being logged in or out. This page provides the user with all of the available info on the site about the product available.
+
+
+### User story 3:
+
+* 'As a competitive buyer, I would like a site that draws a lot of attention to potential bidders' This user story is achieved when the user signs in or registers. They are directed to the products page. From here the user clicks on the 'Click here to bid on this item link'. They are then redirect to the product_detail url. This page provides the user with a single product - the product they intent to bid on - and a "click here to place bid' link. When the user clicks on this link, they are taken to the place_bid url that provides the user with a form that requires an integer as an input - this is the amount the user wishes to bid on the product. When they submit the bid, the user is finally re-directed to a current list of bids on that product. Their bid is displayed in a list in descending order along with other users' bids.
+
+
+### User story 4:
+
+* 'As a person interested in unique historical artifacts, I would like a site that gives me the opportunity to purchase and find out more information about some of them'. The testing for this userstory is essentially covered in the above for user stories 1 and 2. Visiting this site provides the user with a broad and unique range of historical artifacts that come from all over the world and from differing periods in time; from the Ancient Egyptians to Norse Gods to The Knights Templars.
+
+
+### User story 5:
+
+* 'As someone interested in historical events and artifacts, I would like a website that tells of the journey that an item went through for my own fascination'. This user story has been achieved via the urls that direct the user to the individual product info pages through the slideshow hyperlinks found on the home page. These pages provide the user with content that describes the journeys that the items have gone through.
+
+
+### User story 6:
+
+* 'As a user of the bidding site, I would like the opportunity to narrow my search to something that directly interests me so I am not searching through each and every product'. Once the user has registered or signed in, they are taken to the products page which lists every product available. The user can use the Search box at the top of the page to narrow their search by typing in some content that relates to the products that match it. The list of products is then narrowed, making it easier for the user to browse.
 
 
 
