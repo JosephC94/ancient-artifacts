@@ -1,23 +1,70 @@
-# Your Project's Name
+# Ancient Artifacts
 
-One or two paragraphs providing an overview of your project.
+[Link to website via GitHUb](https://github.com/JosephC94/ancient-artifacts/)
 
-Essentially, this part is your sales pitch.
+A website used for browsing, bidding, buying and learning about different ancient artifacts. The website contains a welcome page, registration and login functionality, a page of products listed, detailed info about each product and events they have been involved in, and the option to purchase the product. The website's primary focus is for the user to buy a product.
+
+The website focuses largely on what is for sale, each items journey of events, previous ownership and importance. The goals of the website are to:
+
+*Provide knowledge of each product's journey and significance to entice customer's to purchase
+*Allow a user to purchase products
+*Excellent use of UX to ensure customers go from visiting the website to leaving the website having purchased a product or products
+*Provide enough info of each item to highlight its importance for customers to recognise its true value for purchase
+*Allow users to search for a product
+*Allow users the option to bid on a product
+*Easy navigation
+*Simple order process that conforms with modern day online order processes
  
 ## UX
  
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+ ## Target audience and customers:
+ 
+ ### Ideal customers for this website
+ 
+ * Collectors of rare and valuable items
+ * Customers who have a profound interest in historical artifacts
+ * Rich customers with a fondness for history
+ * Customers of particular beliefs and religions
+ * History students
+ * Archeologists
+ * Historians
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a historian, I would like a site that provides the ability to purchase ancient artifacts for studying
-- As a history student, I would like to know more information about some historical artifacts to gain some knowledge and insight about them
-- As a collector of rare and valuable items, I would like a site that allows me the opportunity to purchase more to add to my collection
-- As a competitive buyer, I would like a site that draws a lot of attention to potential bidders of items that are likely to sell for high prices
-- As a person interested in unique historical artifacts, I would like a site that gives me the opportunity to purchase and find out more information about some of them
-- As someone interested in historical events and artifacts, I would like a website that briefly tells of the journey that the items went through for my own fascination
-- As a user of the bidding site, I would like the opportunity to narrow my search to something that directly interests me so I am not searching through each and every product
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+### These customers are looking for:
+
+* Items of such rarity, that only 1 in the world exists of each
+* Knowledge of the imortance/significance of the products
+* The option to purchase one, or more, of these artifacts
+* A story being told of each item and where its journey has led it to today
+
+
+### The customers are able to achieve the above as:
+
+* The website is simple and focuses primarily on the products listed and their journey of events/description
+* There are no adverts on the site promoting any other kind of material - it only focuses on the artifacts
+* The site does not contain an overload of JavaScript which would slow it down
+* There are few products on the site due to their rarity, making browsing much quicker than having hundreds of products
+* The website is easy to navigate as there are only a few links
+* Each product has their own descriptive content
+* The descriptions of each product provide indepth knowledge about the product and its journey of events and ownership
+* A function for adding a product to a cart and naviagting to a checkout menu
+
+### User stories:
+
+1 As a historian, I would like a site that provides the ability to purchase ancient artifacts for studying
+2 As a history student, I would like to know more information about some historical artifacts to gain some knowledge and insight about them
+3 As a collector of rare and valuable items, I would like a site that allows me the opportunity to purchase more rare items to add to my collection
+4 As a competitive buyer, I would like a site that draws a lot of attention to potential bidders
+5 As a person interested in unique historical artifacts, I would like a site that gives me the opportunity to purchase and find out more information about some of them
+6 As someone interested in historical events and artifacts, I would like a website that tells of the journey that an item went through for my own fascination
+7 As a user of the bidding site, I would like the opportunity to narrow my search to something that directly interests me so I am not searching through each and every product
+
+
+### Mock Ups
+
+## All mockups found [here](https://github.com/JosephC94/ancient-artifacts/)
+ https://github.com/JosephC94/ancient-artifacts/tree/master/mockups
+
 
 ## Features
 
