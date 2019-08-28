@@ -51,7 +51,7 @@ The website focuses largely on what is for sale, each items journey of events, p
 
 ### User stories:
 
-1 As a historian, I would like a site that provides the ability to purchase ancient artifacts for studying
+1 As a historian, I would like a site that provides the ability to purchase ancient artifacts
 2 As a history student, I would like to know more information about some historical artifacts to gain some knowledge and insight about them
 3 As a collector of rare and valuable items, I would like a site that allows me the opportunity to purchase more rare items to add to my collection
 4 As a competitive buyer, I would like a site that draws a lot of attention to potential bidders
@@ -102,23 +102,17 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+### User story 1: 
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+* 'As a historian, I would like a site that provides the ability to purchase ancient artifacts'. This is achieved by providing the user with an option to add a product to the cart from the products page once the user has signed in. To do this, the user would select the quantity of the product (only x1 of each product can be selected as these are Ancient Artifacts) and then click on the 'Buy Now and Add To Cart' button beneath and next to the image and description of the product. The page will refresh, and the cart will then display an integer value of how many products have been added to the cart. The user clicks on View Cart link - they are directed to the View Cart webpage where all of their cart items are displayed. The user then clicks the checkout link and enters their details into the forms. If a user does not enter all of their details, the form will not submit and a pop up window provided by django will ask the user to fill in the field. Once the user has successfully enter all of their details, the form will submit, and the user is re-directed back to the Products page and is greeted with a message stating that the payment has been successful. This removes the item from the Cart, too.
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+### User story 2:
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+* 'As a history student, I would like to know more information about some historical artifacts to gain some knowledge and insight about them'. This user story is achieved when the user - once registered - enters the Products page. This is done automatically when the user registers or signs in, or clicks on the Artifacts or Back to Products links as well as typing in /products/ into the url bar. This page is only accessible if the user has registered, otherwise they are redirected to the home page should they try accessing the Products page outside of being logged in. The user can then 
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+
 
 ## Deployment
 
