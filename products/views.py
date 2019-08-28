@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.utils import timezone
 from .models import Product, Bid
 from .forms import BidForm
@@ -13,24 +13,43 @@ def all_products(request):
     return render(request, 'products.html', {"products": products})
     
 
-def new_bid(request, pk):
-    bids = Bid.objects.all()
-    product = get_object_or_404(Product, pk=id)
-    products = Product.objects.all()
-    if request.method=="POST":
-        form = BidForm(request.POST)
-        if form.is_valid():
-            bid = form.save()
-            return redirect('bid_detail', pk=product.id)
-    else:
-        form = BidForm()
+def product_detail(request, pk):
     
-    return render(request, 'bid_detail.html', {"form": form, "products": products, 'bids': bids, "product": product})
+    product = get_object_or_404(Product, pk=pk)
+    
+    return render(request, 'product_detail.html', {"product": product})
+    
+    # bids = Bid.objects.all()
+    # product = get_object_or_404(Product, pk=pk)
+    # products = Product.objects.all()
+    # if request.method=="POST":
+    #     form = BidForm(request.POST)
+    #     if form.is_valid():
+    #         form.save()
+    #         return redirect('bid_detail', product.pk)
+    # else:
+    #     form = BidForm()
+    
+    # return render(request, 'bidform.html', {"form": form, "products": products, 'bids': bids, "product": product})
+    
+    
+def place_bid(request, pk=None):
+    product = get_object_or_404(Product, pk=pk) if pk else None
+    if request.method == "POST":
+        form = BidForm(request.POST, instance=product)
+        if form.is_valid():
+            product = form.save()
+            return redirect(bid_detail, product.pk)
+    else:
+        form = BidForm(instance=product)
+    return render(request, 'bid_form.html', {'form': form})
+    
+    
+    
     
     
 def bid_detail(request, pk):
-    products = Product.objects.all()
+    product = get_object_or_404(Product, pk=pk)
     bids = Bid.objects.all()
-    product = get_object_or_404(Product, pk=id)
     
-    return render(request, 'bid_detail.html', {"products": products, "bids": bids, "product": product})
+    return render(request, 'bid_detail.html', {"bids": bids, "product": product})

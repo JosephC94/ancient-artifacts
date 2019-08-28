@@ -1,14 +1,11 @@
-{% load static from staticfiles %}
+{% load bootstrap_tags %}
+
+
+<h1>Enter your bid</h1>
+
 
 <div class="text col-sm">{{ product.name }}
     <hr class="product_name_hr">
     <div class="text product_title_and_description col-sm">{{ product.description }}</div>
-</div>
-
-<div>
-    {% for bids in product.bid %}
-
-    <h3>This is a bid of: {{ bids }}</h3>
-
-    {% endfor %}
+    <a href="{% url 'place_bid' product.id %}">Click here to place bid</a>
 </div>
