@@ -15,5 +15,5 @@ class Bid(models.Model):
     product = models.ForeignKey('products.Product', on_delete=models.CASCADE, related_name='bids')
     bid = models.DecimalField(max_digits=9, decimal_places=2)
     
-    def __str__(self):
-        return self.bid
+    # def __str__(self):
+    #     return self.bid

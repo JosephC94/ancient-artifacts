@@ -35,11 +35,14 @@ def product_detail(request, pk):
     
 def place_bid(request, pk=None):
     product = get_object_or_404(Product, pk=pk) if pk else None
+    
     if request.method == "POST":
-        form = BidForm(request.POST, instance=product)
+        form = BidForm(request.POST)
         if form.is_valid():
-            product = form.save()
-            return redirect(bid_detail, product.pk)
+            bid = form.save(commit=False)
+            bid.product = product
+            bid.save()
+            return redirect(bid_detail, pk)
     else:
         form = BidForm(instance=product)
     return render(request, 'bid_form.html', {'form': form})
@@ -50,6 +53,6 @@ def place_bid(request, pk=None):
     
 def bid_detail(request, pk):
     product = get_object_or_404(Product, pk=pk)
-    bids = Bid.objects.all()
+    bids = product.bids
     
     return render(request, 'bid_detail.html', {"bids": bids, "product": product})
