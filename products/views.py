@@ -53,6 +53,6 @@ def place_bid(request, pk=None):
     
 def bid_detail(request, pk):
     product = get_object_or_404(Product, pk=pk)
-    bids = product.bids
+    bids = Bid.objects.filter(product=product.id)
     
     return render(request, 'bid_detail.html', {"bids": bids, "product": product})
