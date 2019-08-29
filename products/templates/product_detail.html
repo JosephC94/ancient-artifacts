@@ -1,11 +1,20 @@
-{% load bootstrap_tags %}
+{% extends 'base.html' %}
+
+{% block bid_and_more_info_page %}
 
 
-<h1>Enter your bid</h1>
-
-
-<div class="text col-sm">{{ product.name }}
+<div class="container">
+    <div class="row">
+        <div class="product_image col-sm" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+        <div class=".col-md-6 .offset-md-3">
+            <div class="text product_price">{{ product.price }}</div>
+        </div>
+        <div class="text col-sm">{{ product.name }}
+            <hr class="product_name_hr">
+                <a class="individual-link-display-smaller-screen" href="{% url 'place_bid' product.id %}">Click here to place bid</a>
+        </div>
+<div class="text col-sm">
     <hr class="product_name_hr">
-    <div class="text product_title_and_description col-sm">{{ product.description }}</div>
-    <a href="{% url 'place_bid' product.id %}">Click here to place bid</a>
+        <div class="text product_title_and_description col-sm">{{ product.description }}</div>
 </div>
+{% endblock %}

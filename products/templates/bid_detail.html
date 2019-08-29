@@ -1,17 +1,23 @@
-{% load static from staticfiles %}
+{% extends 'base.html' %}
 
-<div class="text col-sm">{{ product.name }}
-    <hr class="product_name_hr">
-    <div class="text product_title_and_description col-sm">{{ product.description }}</div>
-    
-    Test
-    
+{% block bid_detail_item %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="product_image col-sm" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+        <div class="text col-sm">{{ product.name }}
+            <hr class="product_name_hr">
+            <div>
+                <p>Current list of bids for {{ product.name }}: </p>
+                {% for bid in bids %}
+
+                <h3>£ {{ bid.bid }}</h3>
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </div>
 
-<div>
-    {% for bid in bids %}
-    
-        <h3>{{ bid.bid }}</h3>
-
-    {% endfor %}
-</div>
+{% endblock %}

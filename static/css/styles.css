@@ -32,6 +32,13 @@ form {
     width: 50%;
 }
 
+.checkout_form{
+    width: 90%;
+}
+
+.bid_form_container {
+    margin-left: 30px;
+}
 
 .text {
     letter-spacing: 2px;
@@ -99,6 +106,30 @@ form {
 
 
 /*----------------Home and Base pages-------------*/
+
+.links-display-smaller-screen{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.individual-link-display-smaller-screen{
+    color: white;
+    font-size: 28px;
+    padding-bottom: 23px;
+}
+
+.individual-link-display-smaller-screen:hover{
+    color: #f1d6ad;
+}
+
+.padding-bottom-20px {
+    padding-bottom: 20px;
+}
+
+.padding-top-30px {
+    padding-top: 30px;
+}
 
 .mark-color-white{
     background-color: white;
@@ -353,4 +384,57 @@ form {
 .product_price {
     padding-bottom: 20px;
     font-size: 30px;
+}
+
+/*---------------place_bid_page-------------------*/
+
+.place_bid_button{
+    padding-top: 50px;
+    font-size: 24px;
+}
+
+.place_bid_button:hover{
+    color: #f1d6ad;
+}
+
+
+
+
+/*--------------Media Queries------------*/
+
+
+@media only screen and (max-width: 544px) {
+    .page_title{
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        font-size: 40px;
+        text-shadow: 1px -1.5px #968857;
+        color: #F8F8F6;
+        text-transform: capitalize;
+    }
+    .item-page-header{
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        color: white;
+        font-family: fantasy;
+        text-decoration: underline;
+        text-transform: capitalize;
+        letter-spacing: 4px;
+        line-height: 4;
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .carousel {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .links-display-smaller-screen {
+        display: none;
+    }
 }

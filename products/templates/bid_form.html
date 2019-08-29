@@ -1,8 +1,19 @@
+{% extends 'base.html' %}
+
 {% load bootstrap_tags %}
 
-<h1>Place bid</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form | as_bootstrap }}
-    <button type="submit" class=" btn btn-primary">Place bid</button>
-</form>
+{% block place_bid_form %}
+
+<div class="container bid_form_container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1 class="text">Place bid</h1>
+            <form method="POST" class="text">
+                {% csrf_token %} {{ form | as_bootstrap }}
+                <button type="submit" class="bid_buy_buttons place_bid_button">Place bid</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
