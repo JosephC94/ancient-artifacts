@@ -246,14 +246,18 @@ If the user attempts to buy £999,999.99 worth of products, Django will throw an
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+This project was developed on AWS Cloud 9. It's changes were commited GitHub pages with each major piece of functionality. The Database used to store the products and product info was on Django's built in SQL database, however, since deployment up to Heroku, the database changed to Prostgres. 
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
+To deploy to GitHub, the following was carried out:
+* log into GitHub.com
+* Under repositries - selected 'New'
+* The repository name 'ancient-artifacts' was given
+* 'Create repository' button was clicked
+* From here, I copied this line of code provided by GitHub under the '...or push an existing repository from the command line' section: 
+git remote add origin https://github.com/JosephC94/ancient-artifacts.git 
+git push -u origin master
+* This was then pasted into the bash terminal inside AWS Cloud9
+* My user name and password was required for security purposes, the code was then pushed to GitHub
 
 
 ## Credits
