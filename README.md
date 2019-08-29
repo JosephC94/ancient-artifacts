@@ -263,11 +263,13 @@ git push -u origin master
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+
+* The infomation for the product pages was found via various Google searches and docs. The info was compiled into one large story for each of the products.
 
 ### Media
-- The photos used in this site were obtained from ...
+
+* The images used on this site are all obtained from Google images. They were saved onto the operating system and edited using this site: https://pixlr.com/x/  - all image edits were used to size them equally
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+* I received inspiration for this project from my own interest in history, as well as films, videos games, and TV programmes.
