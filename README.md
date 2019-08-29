@@ -239,7 +239,9 @@ Should the user attempt to make a bid larger than 9 digits, they will be promted
 
 Should a user attempt to amend the cart, they can only enter the value as '0' - since there is only x1 of each product - the user will be presented with an error message stating that the value must be equal to '0' - the user can not amend the cart item unless they do so - neither the cart or the page changes.
 
+If the user attempts to checkout without items being inside the cart, the user will not be displayed with the checkout forms preventing them from going through the checkout process - the page will remain blank. If the user would be able to checkout without items, Django will throw and error and stop the application.
 
+If the user attempts to buy £999,999.99 worth of products, Django will throw and InvalidRequestError - this is due to Stripe's API and is not at fault with the code for the app.
 
 
 ## Deployment
