@@ -158,7 +158,7 @@ The user is able to access more infomation about each product via the links at t
 
 * I would like to add video content to each product info page that broadcasts archeologists/historians talking about that specific product - this would make for a more user friendly experience rather than just plain text for the user to read.
 
-* I would like a feature that provides the user with a message that informs them that they have to enter a figure into the 'Buy Now and Add to Cart' input box before clicking the button. The message would state 'please enter a quantity to add to your cart' and would not allow the user to continue their action.
+* I would like a feature that provides the user with a message that informs them that they have to enter a figure into the 'Buy Now and Add to Cart' input box before clicking the button. The message would state 'please enter a quantity to add to your cart' and would not allow the user to continue their action. The user is only able to add the figure '1' into the box. However, for a higher level of security, I would like an if else statement inside the view function to ensure that the user can definitely not enter anything else other than '1'.
 
 * I would also like to add another feature that only displays the Checkout form to the user only if they have items in their cart. If not, the Checkout form will not be displayed and the user will be granted with a message 'No items in cart. Please add items to the cart to Checkout'.
 

@@ -45,7 +45,7 @@
             <form method="post" action="{% url 'add_to_cart' product.id %}">
                 {% csrf_token %}
                 <div class="input-group padding_top">
-                    <input class="shadow_remove width_100" name="quantity" type="number" min="1" max="1" class="form-control" placeholder="Quantity">
+                    <input class="shadow_remove width_100" name="quantity" type="number" min="1" max="1" value='1' class="form-control" placeholder="Quantity">
                     <span>
                     <button class="shadow_remove bid_buy_buttons padding_top10" type="submit">Buy Now and Add to cart</button>
                 </span>
