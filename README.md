@@ -266,6 +266,45 @@ git push -u origin master
 * My user name and password was required for security purposes, the code was then pushed to GitHub
 
 
+When deploying to Heroku the following steps were carried out:
+
+* Log into the Heorku.com site
+* Create New App
+* Gave it name 'django-ancient-artifacts'
+* selected region as Europe
+* Select create app button
+* Under Resources - Add Ons - select Heroku Postgres
+* Selected Hobby Dev Free
+* Settings - Reveal Config Vars - copy the database_url
+* Typed the following in the bash terminal in Cloud9: sudo pip3 install dj-database-url
+* Typed the following in the bash terminal in Cloud9: sudo pip3 install psycopg2
+* Typed the following in the bash terminal in Cloud9: spip3 freeze > requirements.txt
+* In settings.py, import dj_database_url
+* Changed Database and pasted database_url inside env.py file
+* Put secret key value in env.py file
+* Migrated using python3 manage.py migrate in the bash terminal
+* Create a super user
+* Selected S3 in AWS services, select a bucket, gave name and region, next, next, give access to public, next, create bucket
+* select bucket, properties, static website hosting, use bucket, enter: index.html, error.html, save
+* permissions, CORS configuration, enter configuration, save, bucket policy, enter in bucket policy and ARN, save
+* Under services, go to IAM, groups, create new group, provided a group name, next step, next step, create group. Policies, create policy, JSON, Import managed policy, search s3, selecte AmaoazonS3FullAccess, import. Replace resource string with list, enter in ARN, enter ARN as second item in list with /* on end, review policy, provide a name, create policy
+* Groups, select group, permissions, attach policy
+* Users, Add user, enter username, tick programmatic access, next, select group, next, next, create user.
+* Download CSV file
+* Go back to S3, open bucket, test by uploading a file.
+* sudo pip3 install django-storages
+* sudo pip3 install boto3
+* in settings.py, add 'storages' to installed apps
+* change settings to allow django and AWS S3 to connect to bucket
+* Add access keys to env var
+* type in python3 manage.py collectstatic, select 'yes' to upload static files
+* To store media and static files, create file as custom_storage.py, create class that inherits S3boto3Storage, import into settings and run python3 manage.py collectstatic
+* 
+
+
+Please note that the development version which is available on GitHub, is different than the deployed version on Heroku. This is because during development the products that were listed were 'test' products and either contained the wrong image, lorum ipsum text and a random price. This was to test the layout and functionailty of the site was clean and effective to a high standard; ready to be completed. Django and Heroku host separate databases, so all content contained in the database had to be re-added once the project was deployed to Heroku . This is because Django stores content into a SQLite database, and Heroku stores it in a Postgres database - the content would not be pushed to Heroku due to the change in databases. If the development version was not to be updated once pushed to Heroku, there would not be a list of products displayed to the user, and themain purpose of the site would have become purposeless.
+
+
 ## Credits
 
 ### Content
