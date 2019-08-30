@@ -14,7 +14,7 @@ def all_products(request):
     
 
 def product_detail(request, pk):
-    
+    """Pulls the detail for a specific product"""
     product = get_object_or_404(Product, pk=pk)
     
     return render(request, 'product_detail.html', {"product": product})
@@ -22,6 +22,7 @@ def product_detail(request, pk):
 
     
 def place_bid(request, pk=None):
+    """Allows user to place a bid on the item they selected"""
     product = get_object_or_404(Product, pk=pk) if pk else None
     
     if request.method == "POST":

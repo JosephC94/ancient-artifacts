@@ -247,6 +247,8 @@ If the user attempts to checkout without items being inside the cart, the user w
 
 If the user attempts to buy £999,999.99 worth of products, Django will throw and InvalidRequestError - this is due to Stripe's API and is not at fault with the code for the app.
 
+Should the user attempt to checkout when there are no items in the cart, Django will throw an InvalidRequestError. The user is able to access the Checkout page and fill in the form. However they can not proceed unless they have items in their cart.
+
 
 ## Deployment
 

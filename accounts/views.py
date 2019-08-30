@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from accounts.forms import UserLoginForm, UserRegistrationForm
 
-# Create your views here.
+
 
 @login_required
 def logout(request):
@@ -37,10 +37,11 @@ def login(request):
     return render(request, 'index.html', {"login_form": login_form})
     
     
+
 def registration(request):
     """Displays the registration page"""
     if request.user.is_authenticated:
-        return redirect(reverse('index'))
+        return redirect(reverse('products'))
         
     if request.method == "POST":
         registration_form = UserRegistrationForm(request.POST)

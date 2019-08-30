@@ -4,9 +4,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from accounts.forms import UserLoginForm
 
-# Create your views here.
 
 def index(request):
+    """Displays the home page and allows a user to log in. Directes them to Products page once logged in"""
     if request.method=="POST":
         login_form = UserLoginForm(request.POST)
         if login_form.is_valid():

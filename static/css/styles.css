@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway|Cormorant+Garamond|Libre+Caslon+Display|Livvic|Montserrat|Open+Sans+Condensed:300|Fjord+One|Special+Elite|Vesper+Libre&display=swap');
 
-/*-------------fonts------------*/
+
 
 body {
     background-image: url(/static/css/bg-3.jpg);
@@ -20,6 +20,9 @@ input[type="text"] {
     font-family: 'Montserrat', serif;
 }
 
+/*-------------fonts------------*/
+
+
 .special-elite {font-family: 'Special Elite', cursive;}
 .vesper-libre {font-family: 'Vesper Libre', serif;}
 .fjord-one {font-family: 'Fjord One', serif;}
@@ -29,6 +32,10 @@ input[type="text"] {
 .Montserrat {font-family: 'Montserrat', serif;}
 .Open_Sans_Condensed {font-family: 'Open+Sans+Condensed:300', serif;}
 .white_font {color: #e3dfd0;}
+
+
+/*--------------------form styling and generic text styling--------------------*/
+
 
 form {
     width: 50%;

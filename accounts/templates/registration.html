@@ -11,6 +11,9 @@
 {% block content %}
 
 
+<!--Registration form-->
+
+
 <form method="POST" class="register_form">
     {% csrf_token %} 
     {{ registration_form | as_bootstrap }}

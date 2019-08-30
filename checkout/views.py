@@ -15,13 +15,15 @@ from products.models import Product
 stripe.api_key = settings.STRIPE_SECRET
 
 @login_required()
+
+
+
 def checkout(request):
-    
+    """Displays the checkout depending if the user is signed in or not"""
     if request.method == "POST":
         order_form = OrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)
 
-        # import pdb; pdb.set_trace()
 
         print(payment_form.data)
         print(payment_form.errors)

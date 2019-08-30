@@ -6,7 +6,7 @@
 
 {% block home_page %}<a  href="{% url 'index' %}" <i class="fas fa-home page_links"></i> Home</a>{% endblock %}
 
-
+<!--Displays the cart-->
 
 {% block cart_page %}
     <a  href="{% url 'view_cart' %}" class="fas fa-cart-arrow-down page_links">
@@ -24,6 +24,9 @@
 {% block content %}
 
 
+<!--Search bar-->
+
+
 <div class="container">
     <div class="row">
         <div class="col-sm search_bar">
@@ -34,6 +37,9 @@
         </div>
     </div>
 </div>
+
+
+<!--Displays the list of products-->
 
 
 <div class="container">

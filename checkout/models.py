@@ -2,6 +2,7 @@ from django.db import models
 from products.models import Product
 
 
+"""Form for customer's details"""
 
 class Order(models.Model):
     full_name = models.CharField(max_length=75, blank=False)
