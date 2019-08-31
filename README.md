@@ -304,7 +304,7 @@ git push -u origin master
 * Ran the project - all was working as expected.
 
 
-## Travis Continuous Integration
+### Travis Continuous Integration
 
 * Allow Travis to connect to github
 * Find project in account on Travis-ci.org and click the switch so is ticked
@@ -323,17 +323,23 @@ script:
 * Run Travis, build passing should appear
 
 
-## Hosting project on Heroku
+### Hosting project on Heroku
 
 * Heroku.com, select project, settings, reveal config vars, add config vars from env.py file,
 * Deploy, GitHub, connect to github, enter password to authorise, search repo name, connect - Heroku will be connected
 * sudo pip3 install gunicorn
 * New file called Procfile - in top level
 * entered code web: gunicorn artifacts.wsgi:application
-* 
+* commit, add and push changes
+* Add DISABLE_COLLECTSTATIC: 1 in config vars
+* Deploy, deploy branch
+* Open the app, copy the heroku address into allowed hosts in settings.py
+* Add, commit and push changes to github
+* Deploy, Reset Dynos, Enable Automatic Deploys, Deploy Branch
+* Open app - should now be working.
 
 
-Please note that the development version which is available on GitHub, is different than the deployed version on Heroku. This is because during development the products that were listed were 'test' products and either contained the wrong image, lorum ipsum text and a random price. This was to test the layout and functionailty of the site was clean and effective to a high standard; ready to be completed. Django and Heroku host separate databases, so all content contained in the database had to be re-added once the project was deployed to Heroku . This is because Django stores content into a SQLite database, and Heroku stores it in a Postgres database - the content would not be pushed to Heroku due to the change in databases. If the development version was not to be updated once pushed to Heroku, there would not be a list of products displayed to the user, and themain purpose of the site would have become purposeless.
+Please note that the development version which is available on GitHub, is different than the deployed version on Heroku. Django and Heroku host separate databases, so all content contained in the database had to be re-added once the project was deployed to Heroku . This is because Django stores content into a SQLite database, and Heroku stores it in a Postgres database - the content would not be pushed to Heroku due to the change in databases. If the development version was not to be updated once pushed to Heroku, there would not be a list of products displayed to the user, and themain purpose of the site would have become purposeless. During development, the products that were listed were 'test' products and either contained the wrong image, lorum ipsum text and a random price. This was to test the layout and functionailty of the site was clean and effective to a high standard; ready to be completed.
 
 
 ## Credits
