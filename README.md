@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/JosephC94/ancient-artifacts.svg?branch=master)](https://travis-ci.org/JosephC94/ancient-artifacts)
-
 # Ancient Artifacts
 
 [Link to website via GitHUb](https://github.com/JosephC94/ancient-artifacts/)
