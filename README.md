@@ -360,3 +360,5 @@ Please note that the development version which is available on GitHub, is differ
 PAM==0.4.2
 
 python-apt==1.6.4
+
+ssh-import-id==5.7
