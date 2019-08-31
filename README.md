@@ -320,6 +320,8 @@ install: "pip install -r requirements.txt"
 script:
 - SECRET_KEY = "whatever"./manage.py test
 * commit and push to GitHub
+* delete contents from requirements file should Travis throw an error - these are listed by Travis
+* Chnage settings.py file so Travis has access to SQLite database
 
 
 Please note that the development version which is available on GitHub, is different than the deployed version on Heroku. This is because during development the products that were listed were 'test' products and either contained the wrong image, lorum ipsum text and a random price. This was to test the layout and functionailty of the site was clean and effective to a high standard; ready to be completed. Django and Heroku host separate databases, so all content contained in the database had to be re-added once the project was deployed to Heroku . This is because Django stores content into a SQLite database, and Heroku stores it in a Postgres database - the content would not be pushed to Heroku due to the change in databases. If the development version was not to be updated once pushed to Heroku, there would not be a list of products displayed to the user, and themain purpose of the site would have become purposeless.
