@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/JosephC94/ancient-artifacts.svg?branch=master)](https://travis-ci.org/JosephC94/ancient-artifacts)
+
 # Ancient Artifacts
 
 [Link to website via GitHUb](https://github.com/JosephC94/ancient-artifacts/)
@@ -266,7 +268,9 @@ git push -u origin master
 * My user name and password was required for security purposes, the code was then pushed to GitHub
 
 
-When deploying to Heroku the following steps were carried out:
+## When deploying to Heroku the following steps were carried out:
+
+### Store static and media files on AWS:
 
 * Log into the Heorku.com site
 * Create New App
@@ -299,7 +303,23 @@ When deploying to Heroku the following steps were carried out:
 * Add access keys to env var
 * type in python3 manage.py collectstatic, select 'yes' to upload static files
 * To store media and static files, create file as custom_storage.py, create class that inherits S3boto3Storage, import into settings and run python3 manage.py collectstatic
-* 
+* Ran the project - all was working as expected.
+
+
+## Travis Continuous Integration
+
+* Allow Travis to connect to github
+* Find project in account on Travis-ci.org and click the switch so is ticked
+* select project, build unkown - format - Markdown - copy result code and paste in to readme file. 
+* Create new file at top level, name it .travis.yml
+* Enter the following into the file. Note that the secret key is a dummy secret key:
+language: python
+python:
+- "3.4"
+install: "pip install -r requirements.txt"
+script:
+- SECRET_KEY = "whatever"./manage.py test
+* commit and push to GitHub
 
 
 Please note that the development version which is available on GitHub, is different than the deployed version on Heroku. This is because during development the products that were listed were 'test' products and either contained the wrong image, lorum ipsum text and a random price. This was to test the layout and functionailty of the site was clean and effective to a high standard; ready to be completed. Django and Heroku host separate databases, so all content contained in the database had to be re-added once the project was deployed to Heroku . This is because Django stores content into a SQLite database, and Heroku stores it in a Postgres database - the content would not be pushed to Heroku due to the change in databases. If the development version was not to be updated once pushed to Heroku, there would not be a list of products displayed to the user, and themain purpose of the site would have become purposeless.
