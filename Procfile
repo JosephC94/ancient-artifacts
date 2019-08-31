@@ -1,0 +1,1 @@
+web: gunicorn artifacts.wsgi:application

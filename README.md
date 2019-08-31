@@ -322,7 +322,17 @@ script:
 * commit and push to GitHub
 * delete contents from requirements file should Travis throw an error - these are listed by Travis
 * Chnage settings.py file so Travis has access to SQLite database command-not-found==0.3
+* Run Travis, build passing should appear
 
+
+## Hosting project on Heroku
+
+* Heroku.com, select project, settings, reveal config vars, add config vars from env.py file,
+* Deploy, GitHub, connect to github, enter password to authorise, search repo name, connect - Heroku will be connected
+* sudo pip3 install gunicorn
+* New file called Procfile - in top level
+* entered code web: gunicorn artifacts.wsgi:application
+* 
 
 
 Please note that the development version which is available on GitHub, is different than the deployed version on Heroku. This is because during development the products that were listed were 'test' products and either contained the wrong image, lorum ipsum text and a random price. This was to test the layout and functionailty of the site was clean and effective to a high standard; ready to be completed. Django and Heroku host separate databases, so all content contained in the database had to be re-added once the project was deployed to Heroku . This is because Django stores content into a SQLite database, and Heroku stores it in a Postgres database - the content would not be pushed to Heroku due to the change in databases. If the development version was not to be updated once pushed to Heroku, there would not be a list of products displayed to the user, and themain purpose of the site would have become purposeless.
