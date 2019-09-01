@@ -375,3 +375,4 @@ distro-info===0.18ubuntu0.18.04.1
 hibagent==1.0.1
 language-selector==0.1
 PAM==0.4.2
+pygobject==3.26.1
