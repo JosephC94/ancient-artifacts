@@ -371,3 +371,4 @@ ufw==0.36
 
 cloud-init==19.1
 command-not-found==0.3
+distro-info===0.18ubuntu0.18.04.1
