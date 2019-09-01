@@ -356,6 +356,7 @@ Please note that the development version which is available on GitHub, is differ
 
 * I received inspiration for this project from my own interest in history, as well as films, videos games, and TV programmes.
 
+------31st Aug-------
 
 PAM==0.4.2
 
@@ -364,3 +365,9 @@ python-apt==1.6.4
 ssh-import-id==5.7
 
 ufw==0.36
+
+
+------1st sept-----
+
+cloud-init==19.1
+command-not-found==0.3
