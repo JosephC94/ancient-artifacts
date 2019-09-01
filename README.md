@@ -376,3 +376,4 @@ hibagent==1.0.1
 language-selector==0.1
 PAM==0.4.2
 pygobject==3.26.1
+python-apt==1.6.4
