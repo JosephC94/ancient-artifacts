@@ -13,10 +13,9 @@
   
     <!--custom css-->
     <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
-    
 
     <title>{% block item_page_title %}Knight's Templar{% endblock %}</title>
-  
+</head> 
   
 <nav>
     <a class="navbar-text-home" href="{% url 'index' %}">Home</a>
@@ -33,7 +32,7 @@
 <div class="container chapel-container">
     <div class="row">
         <div class="chapel col">
-            <img class="max-width-100" {% block image %} src="/static/images/chapel1.png" {% endblock %}>
+            <img class="max-width-100" {% block image %} src="/media/images/chapel1.png" {% endblock %}>
             <p>{% block image_info %}Chapel of the Beaune commandery, where Jacques de Molay was ordained as his sword discovered{% endblock %}</p>
         </div>
     </div>
@@ -43,7 +42,7 @@
 <div class="conatiner jacques-image-container">
     <div class="row margin-right">
         <div class="jacques-de-molay">
-            <img class="max-width-100" {% block image_two %}src="/static/images/180px-JacquesdeMolay.jpg"{% endblock %}>
+            <img class="max-width-100" {% block image_two %}src="/media/images/180px-JacquesdeMolay.jpg"{% endblock %}>
             <p>{% block image_info_two %}Jacques de Molay{% endblock %}</p>
         </div>
     </div>

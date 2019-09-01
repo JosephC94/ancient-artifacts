@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8cd5a17de55646daa72e31f910ae53bb.vfs.cloud9.us-east-1.amazonaws.com', 'django-ancient-artifacts.herokuapp.com']
 
